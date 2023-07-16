@@ -1,0 +1,408 @@
+/*
+Categories:
+1. Extra-small = Lower than 600px.
+2. Small = Between 600px - 768px.
+3. Medium = Between 768px - 992px.
+4. Large = Between 992px - 1200px.
+5. Extra-large = Larger than 1200px.
+*/
+
+@media (width <= 600px) {
+  .article-home {
+    flex-direction: column;
+  }
+
+  .mini-sidebar {
+    flex-direction: row;
+  }
+}
+
+@media (601px <= width <= 768px) {
+  .article-home {
+    flex-direction: column;
+  }
+
+  .mini-sidebar {
+    flex-direction: row;
+  }
+}
+
+@media (769px <= width <= 992px) {
+  .mini-sidebar {
+    flex-direction: column;
+  }
+}
+
+@media (993px <= width <= 1200px) {
+  .mini-sidebar {
+    flex-direction: column;
+  }
+}
+
+@media (width >= 1201px) {
+  .mini-sidebar {
+    flex-direction: column;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+/* HEADER */
+
+.navigation-bar .main-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  word-wrap: break-word;
+  z-index: 1;
+}
+
+.navigation-bar .main-header h3 {
+  -webkit-text-stroke: 0.1px black;
+  text-shadow: 1px 2px 4px black;
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22px;
+  align-items: center;
+  overflow: auto;
+  width: 100%;
+  padding: 8px 12px;
+  left: 0;
+  top: 0;
+  background-color: #4d4d4d;
+  color: var(--text-color2);
+  box-shadow: 1px 2px 4px black;
+  z-index: 1;
+}
+
+.navigation-bar img {
+  /* border: 1px black solid; */
+  max-width: 64px;
+  max-height: 75.25px;
+}
+
+.navigation-link a {
+  margin: auto 16px;
+  text-decoration: none;
+  color: var(--text-color2);
+  transition: 0.2s ease-in;
+  /* border: 1px black solid; */
+  display: inline-block;
+  -webkit-text-stroke: 0.1px black;
+  text-shadow: 1px 2px 4px black;
+}
+
+.navigation-link a.active {
+  font-size: 30px;
+}
+
+.navigation-link a:hover {
+  opacity: 0.6;
+}
+
+/* ARTICLE */
+.about-me-section {
+  margin: 12px auto;
+  padding: 24px;
+  /* border: 1px black solid; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+article .article-home {
+  /* border: 1px black solid; */
+  padding: 12px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+article .mini-sidebar {
+  /* border: 1px black solid; */
+  display: flex;
+  gap: 16px;
+  flex: 0;
+  align-items: center;
+}
+
+article .mini-home-content {
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  margin: 0 16px;
+  padding: 12px;
+}
+
+article .mini-img-profile {
+  /* border: 1px black solid; */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+article .article-content {
+  /* border: 1px black solid; */
+  margin-top: 10px;
+  padding: 12px;
+}
+
+.mini-sidebar img {
+  width: 64px;
+  /* border: 1px black solid; */
+  vertical-align: middle;
+  filter: gray;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  transition: 0.5s ease-in-out;
+}
+
+.mini-sidebar img:hover {
+  filter: none;
+  -webkit-filter: none;
+}
+
+.content-greetings {
+  font-size: 17px;
+}
+
+.mini-home-content h1 {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-size: 32px;
+}
+
+.mini-home-content h4 {
+  margin: 6px 0;
+}
+
+.mini-home-content p {
+  margin-top: 6px;
+}
+
+.mini-home-content button {
+  width: 150px;
+  height: 35px;
+  background-color: var(--main-color1);
+  font-size: 17px;
+  color: var(--text-color2);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 2.5px 2.5px 2.5px 0px var(--box-bg-color2);
+}
+
+.mini-img-profile {
+  display: flex;
+  align-items: end;
+  width: fit-content;
+}
+
+.mini-img-profile img {
+  width: 300px;
+  height: 570px;
+  object-fit: cover;
+}
+
+/* OTHERS */
+:root {
+  /* Explanation:
+    1 = Light mode
+    2 = Dark mode */
+
+  --bg-color1: #fdfdfd;
+  --bg-color2: ;
+
+  --box-bg-color1: ;
+  --box-bg-color2: #4d4d4d;
+
+  --main-color1: #754ef9;
+  --main-color2: ;
+
+  --text-color1: #333;
+  --text-color2: #fdfdfd;
+
+  --white-color1: #fdfdfd;
+
+  --shadow-color1: rgba(0, 0, 0, 0.2);
+  --shadow-color2: ;
+}
+
+/* transform: translate(-100%);
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; */
+
+/* HAMBURGER MENU */
+
+@media (width <= 992px) {
+  .navigation-link {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .hamburger-menu-link {
+    display: none;
+  }
+}
+
+@media (width >= 993px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .hamburger-menu-link {
+    display: none;
+  }
+}
+
+.hamburger-menu {
+  margin: auto 16px;
+  text-decoration: none;
+  /* border: 1px black solid; */
+  cursor: pointer;
+}
+
+.hamburger-menu i {
+  text-align: center;
+  vertical-align: middle;
+  color: var(--text-color1);
+  transition: 0.3s;
+  transform: none;
+}
+
+.hamburger-menu i:active {
+  pointer-events: none;
+}
+
+.hamburger-menu button {
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.hamburger-menu button:hover {
+  opacity: 1;
+}
+
+.hamburger-menu-link {
+  flex-direction: column;
+  display: flex;
+  border: 1px black solid;
+  background-color: var(--box-bg-color2);
+  width: 100%;
+  position: relative;
+  left: 0;
+}
+
+.hamburger-menu-link a {
+  text-decoration: none;
+  color: var(--text-color2);
+  font-size: 22px;
+  display: block;
+  padding: 8px;
+  transition: 0.5s ease-out;
+  word-spacing: 8px;
+  -webkit-tap-highlight-color: transparent;
+
+  border-bottom: 1px black solid;
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+}
+
+.hamburger-menu-link a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.hamburger-menu-link i {
+  width: 36px;
+  text-align: center;
+}
+
+/* HAMBURGER MENU TRANSITION */
+.transition1 {
+  animation: 1s transition1 1;
+}
+.transition2 {
+  animation: 1.5s transition2 1;
+}
+.transition3 {
+  animation: 2s transition3 1;
+}
+.transition4 {
+  animation: 2.5s transition4 1;
+}
+
+@keyframes transition1 {
+  from {
+    margin-left: -50px;
+    position: absolute;
+    border: none;
+  }
+  to {
+    margin-left: 0;
+    position: relative;
+  }
+}
+@keyframes transition2 {
+  from {
+    margin-left: -100px;
+    position: absolute;
+    border: none;
+  }
+  to {
+    margin-left: 0;
+    position: relative;
+  }
+}
+@keyframes transition3 {
+  from {
+    margin-left: -150px;
+    position: absolute;
+    border: none;
+  }
+  to {
+    margin-left: 0;
+    position: relative;
+  }
+}
+@keyframes transition4 {
+  from {
+    margin-left: -200px;
+    position: absolute;
+    border: none;
+  }
+  to {
+    margin-left: 0;
+    position: relative;
+  }
+}
+
+* {
+  /* border: 1px black solid; */
+}
