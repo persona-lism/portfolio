@@ -95,7 +95,7 @@ body {
   top: 0;
   left: 0;
   margin: 0;
-  background: linear-gradient(to left, white, lightblue);
+  background: #333333;
 }
 
 marquee {
@@ -115,11 +115,6 @@ marquee {
   z-index: 1;
 }
 
-.navigation-bar .main-header h3 {
-  -webkit-text-stroke: 0.1px black;
-  text-shadow: 1px 2px 4px black;
-}
-
 .navigation-bar {
   display: flex;
   flex-direction: row;
@@ -134,10 +129,14 @@ marquee {
   /* background-color: #4d4d4d; */
   
 
-  background-color: #1b1f22;
-  color: var(--text-color2);
-  box-shadow: 1px 2px 4px black;
+  background-color: #8a3ffc ;
+  color: #ffffff;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);;
   z-index: 1;
+}
+
+.navigation-bar h3, a {
+  text-shadow: 1.5px 1.5px rgba(0, 0, 0, 0.5);
 }
 
 .navigation-bar img {
@@ -173,6 +172,8 @@ marquee {
   font-size: 32px;
   font-weight: 800;
   text-align: center;
+  color: #FFDB58;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 article .article-home {
@@ -226,12 +227,12 @@ article .column-direction {
   flex-direction: row;
   padding: 8px 0;
   max-width: 500px;
-  color: rgb(203 213 224);
-  font-weight: 600;
+  color: #ffffff;
 }
 
 .article-text h1 {
-  color: white;
+  color: #587CFF;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .article-details {
@@ -251,20 +252,33 @@ article .column-direction {
   display: flex;
   flex-direction: column;
   background-color: #1b1f22;
-  border: 1px #495057 solid;
-
+  border: 1px #FF587C solid;
+  
   min-height: 200px;
   border-radius: 12px;
 }
 
-.article-strength h3,
+.article-strength h3{
+  margin: 4px 0;
+  color: #FF8551;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.article-weakness h3 {
+  margin: 4px 0;
+  color: #EF6262;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+.article-journey h3{
+  margin: 4px 0;
+  color: #A0D995;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
 .article-strength p,
-.article-weakness h3,
 .article-weakness p,
-.article-journey h3,
 .article-journey * {
   margin: 4px 0;
-  color: var(--text-color2);
+  color: #ffffff;
 }
 
 .article-text {
@@ -278,7 +292,7 @@ article .article-content {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  border: 1px #495057 solid;
+  border: 1px #a56aff solid;
 
   border-radius: 8px;
   margin: 10px 16px;
@@ -320,21 +334,28 @@ article .article-content {
 
 .content-greetings {
   font-size: 17px;
+  color: #ff355e;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mini-home-content h1 {
   margin-top: 6px;
   margin-bottom: 0;
   font-size: 32px;
-  color: #0c2340;
+  color: #c0c0c0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mini-home-content h4 {
   margin: 6px 0;
+  color: #8a3ffc;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mini-home-content p {
   margin-top: 6px;
+  color: #f0f0f0;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .mini-home-content button {
@@ -346,7 +367,7 @@ article .article-content {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  box-shadow: 2.5px 2.5px 2.5px 0px var(--box-bg-color2);
+  box-shadow: 2.5px 2.5px 2.5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .mini-img-profile {
@@ -561,12 +582,14 @@ article .article-content {
   font-size: 32px;
   font-weight: 800;
   text-align: center;
+  color: #FFDB58;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .showcase-content {
   display: flex;
   flex-direction: column;
-  border: 1px #495057 solid;
+  border: 1px #a56aff solid;
 
   background-color: #212529;
   margin: 10px 16px;
@@ -586,10 +609,9 @@ article .article-content {
 .s10th-grade-content,
 .s11th-grade-content,
 .s12th-grade-content {
-  border: 1px #495057 solid;
+  border: 1px #FF587C solid;
   flex: 1;
   background-color: #1b1f22;
-  color: var(--text-color2);
 
   border-radius: 12px;
   padding: 32px;
@@ -597,6 +619,18 @@ article .article-content {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.s10th-grade-content {
+  color: #f1e2ad;
+}
+
+.s11th-grade-content {
+  color: #d6ad60;
+}
+
+.s12th-grade-content {
+  color: #e1a140;
 }
 
 .showcase-description,
@@ -610,10 +644,10 @@ article .article-content {
 }
 
 .showcase-achievement {
-  border: 1px #495057 solid;
+  border: 1px #FF587C solid;
   flex: 1;
   background-color: #1b1f22;
-  color: var(--text-color2);
+  color: #ffcb15;
   margin: 16px 12px;
 
   border-radius: 12px;
@@ -698,6 +732,8 @@ article .article-content {
   font-size: 32px;
   font-weight: 800;
   text-align: center;
+  color: #FFDB58;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .contact-content {
@@ -714,7 +750,7 @@ article .article-content {
   background-color: #212529;
   border-radius: 12px;
   overflow: scroll;
-  border: 1px #495057 solid;
+  border: 1px #a56aff solid;
 }
 
 .social-media::-webkit-scrollbar {
